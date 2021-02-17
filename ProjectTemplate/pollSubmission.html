@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Submit a Poll</title>
+	<!-- <link rel="stylesheet" href="style.css" /> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Tech Titans</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Calendar
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="calendar.html">View Events</a></li>
+            <li><a class="dropdown-item" href="calendarEvent.html">Create Event</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="pollSubmission.html">Submit Poll</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">
+            Suggestions
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="suggestionList.html">View Suggestions</a></li>
+            <li><a class="dropdown-item" href="suggestionSubmission.html">Create Suggestion</a></li>
+          </ul>
+        </li>
+        <li class="nav-item" me-auto>
+          <a class="nav-link" href="createAcct.html" style="align: right;">Log in / Create an Account</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+<br>
+<link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+	<div class="submission-content" id="sub-content">
+		<h2 class="submission-title">Submit a Poll</h2>
+
+		<div class="newPoll">
+			<form id="pollForm" method="POST" onsubmit="acknowledgement()">
+				<div class="pollName">
+					<textarea type="text" placeholder="Enter your Poll's Name" id="pollname" name="name"></textarea>
+        </div>
+        <div class="pollDesc">
+          <textarea  type="text" placeholder="Enter a poll description" id="pollDescription" name="desc"></textarea>
+        </div>
+        <div class="poll-box">
+          <textarea  type="text" placeholder="Enter Poll Answer 1" id="a1" name="a1"></textarea>
+        </div>
+        <div class="poll-box">
+          <textarea  type="text" placeholder="Enter Poll Answer 2" id="a2" name="a2"></textarea>
+        </div>  
+        <div class="poll-box">
+          <textarea  type="text" placeholder="Enter Poll Answer 3" id="a3" name="a3"></textarea>
+        </div>  
+        <div class="poll-box">
+          <textarea  type="text" placeholder="Enter Poll Answer 4" id="a4" name="a4"></textarea>
+        </div>  
+        <div class="submitButton">
+        <input type="submit">
+        <input type="button" value="Submit test" onclick="acknowledgement()">
+        </div>
+      </form>
+
+      <table class="pollTable">
+
+      </table>
+    </div>
+  </div>
+  <div class="submission-content" id="addToMe"> 
+    <h2 class="createdPolls">Created Polls</h2>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+</script>
+    </body>
+</html>
