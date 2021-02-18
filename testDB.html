@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <title>MySqlJs test</title>
+</head>
+<script src="http://mysqljs.com/mysql.js"></script>
+
+<body>
+    <pre id="output"></pre>
+    <script src="script.js"></script>
+
+<!-- THIS IS WORKING for the database connection!! We just have to convert the JSON stuff to workable code. See below -->
+
+<script>
+        // This code gets information from the database. It outputs in a JSON style format.
+
+        MySql.Execute(
+            "107.180.1.16",
+            "2021group2",
+            "group22021",
+            "2021group2",
+            "select * from poll_info",
+            function (data) {
+                document.getElementById("output").innerHTML = JSON.stringify(data, null, 2);
+            });
+
+        // This code adds information to the database, and then reads from it when that is done.
+        
+        // MySql.Execute(
+        //     "107.180.1.16",
+        //     "2021group2",
+        //     "group22021",
+        //     "2021group2",
+        //     'INSERT INTO poll_info VALUES (null, "sixth", "6.", "Awesome", "2", "3", "four");',
+        //     function (data) {
+        //         document.getElementById("output").innerHTML = JSON.stringify(data, null, 2);
+        //     });
+    </script>
+</body>
+
+</html>
